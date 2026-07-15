@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== 全局基础样式 ===== */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #dbdbc4;
+  overflow-x: hidden;
+  font-family: 'DotGothic16', sans-serif;
+}
+
+/* ===== 像素化图片渲染 ===== */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* ===== Dither 纹理背景 ===== */
+.dither-bg {
+  background-image: radial-gradient(circle, #1b1d0e 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+/* ===== 1440px 外层容器 ===== */
+.page-wrapper {
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== 取景器扫描线 ===== */
+.scanline {
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.08) 0px,
+    rgba(0, 0, 0, 0.08) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* ===== 像素网格 ===== */
+.pixel-grid {
+  background-image: linear-gradient(
+      rgba(27, 29, 14, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(27, 29, 14, 0.05) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* ===== 粗边框复用 ===== */
+.pixel-border {
+  border: 4px solid #1b1d0e;
+}
+.pixel-border-sm {
+  border: 2px solid #1b1d0e;
+}
+
+/* ===== 硬阴影复用 ===== */
+.brutal-border {
+  border: 2px solid #1b1d0e;
+}
+.brutal-shadow {
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+}
+.brutal-shadow-sm {
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
+}
+
+/* ===== 噪点模拟层 ===== */
+.pixel-dither {
+  background-image: radial-gradient(circle, #1b1d0e 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* ===== 滑块缩放反馈 ===== */
+.scale-105 {
+  transform: scale(1.05);
+}
+.scale-110 {
+  transform: scale(1.1);
+}
